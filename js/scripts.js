@@ -6,8 +6,9 @@ var add = document.getElementById('addElem');
 add.addEventListener('click', function(element) {
 	var element = document.createElement('li');
 
+	var lis = document.getElementsByTagName('li');
 
-	element.innerHTML = 'item';
+	element.innerHTML = 'item ' + lis.length;
 	list.appendChild(element);
 	document.getElementById('list').appendChild(element);
 });
@@ -17,23 +18,28 @@ var buttonsWithClass = document.getElementsByClassName('button');
 console.log(buttonsWithClass);
 
 for (var i = 0; i < buttonsWithClass.length; i++) {
-	alert(document.getElementsByClassName('button').innerText);
+	//alert(document.getElementsByClassName('button').innerText);
+	console.log(buttonsWithClass[i].innerText);
 }
 
 //Zadanie 9.4 CHOINKA
-function drawTree() {
-	for ( i = 0 ; i <= 5 ; i++) {
-  
+function drawTree(h) {
+	var star = '';
 
-  	var star = '';
+	for ( i = 0 ; i < h ; i++) {
+	  	star = '';
 
-  for (j = 0; j <= 5; j++) {
-  	star += '*';
-  }
+	  for (j = 0; j <= i; j++) {
+	  	star += '*';
+	  }
+
+	  console.log(star);
+	}
+
+
 }
-console.log(star);
-}
 
+drawTree(5);
 
 
 // Zadanie 9.3
