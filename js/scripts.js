@@ -45,10 +45,10 @@ var dinosaur = 'triceratops';
 var UpperCaseDinosaur = dinosaur.toUpperCase();
 console.log(UpperCaseDinosaur);
 
-var changeText = text.replace('Velociraptor', 'triceratops');
+var changeText = text.replace('Velociraptor', UpperCaseDinosaur);
 console.log(changeText);
 
-var textDinosaur = changeText.substr(0,73);
+var textDinosaur = changeText.substr(0, text.length/2);
 console.log(textDinosaur);
 
 
@@ -71,11 +71,15 @@ if (allNames.indexOf(newName) === -1) {
 function getTriangleArea(a, h) {
 	
 	if (a <= 0 || h <= 0) {
-		console.log('Nieprawidłowe dane')
+		return 'Nieprawidłowe dane';
+	} else {
+		return a * h/2
 	}
-	return a * h/2
 }
-console.log(getTriangleArea(10,6));
+
+
+
+console.log(getTriangleArea(10,-6));
 
 var triangle1Area = getTriangleArea(10,15);
 var triangle2Area = getTriangleArea(3,7);
