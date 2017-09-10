@@ -1,3 +1,41 @@
+// Zadanie 9.6
+
+var list = document.getElementById('list');
+var add = document.getElementById('addElem');
+
+add.addEventListener('click', function(element) {
+	var element = document.createElement('li');
+
+
+	element.innerHTML = 'item';
+	list.appendChild(element);
+	document.getElementById('list').appendChild(element);
+});
+
+//Zadanie 9.5
+var buttonsWithClass = document.getElementsByClassName('button');
+console.log(buttonsWithClass);
+
+for (var i = 0; i < buttonsWithClass.length; i++) {
+	alert(document.getElementsByClassName('button').innerText);
+}
+
+//Zadanie 9.4 CHOINKA
+function drawTree() {
+	for ( i = 0 ; i <= 5 ; i++) {
+  
+
+  	var star = '';
+
+  for (j = 0; j <= 5; j++) {
+  	star += '*';
+  }
+}
+console.log(star);
+}
+
+
+
 // Zadanie 9.3
 var text = 'Velociraptor is a genus of herbivorous ceratopsid dinosaur that first appeared during the late Maastrichtian stage of the late Cretaceous period.'
 var dinosaur = 'triceratops';
